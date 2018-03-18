@@ -1,0 +1,19 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=A6:B3:DF:D4:CA:2D:FB:2E:D8:D6:71:03:28:AC:58:52:EF:48:FB:5A%3Bcom.example.dimuth.dengue_phi_client
+
+    You can also add your credentials to an existing key, using this line:
+    A6:B3:DF:D4:CA:2D:FB:2E:D8:D6:71:03:28:AC:58:52:EF:48:FB:5A;com.example.android.dengue_phi_client
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCsYTbjwkMZaqiMKin5eI37WzbM8UZOz4A</string>
+</resources>

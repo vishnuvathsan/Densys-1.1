@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/red"
+    android:id="@+id/root_view"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="56dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="496dp"
+            android:layout_height="156dp"
+            android:id="@+id/splashImageView"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/design_dengue" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/splashText"
+            android:text="Welcome to Dengue Sentinel Site Surveillance Mobile Application"
+            android:textAlignment="center" />
+    </LinearLayout>
+</ScrollView>

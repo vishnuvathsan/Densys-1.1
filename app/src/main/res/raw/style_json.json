@@ -1,0 +1,21 @@
+[
+  {
+    "featureType": "poi.medical",
+    "stylers": [
+      {
+        "color": "#ff8000"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:table="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_patient_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.densysMobile.android.dengue_phi_client.PatientHistory">
+
+
+    <de.codecrafters.tableview.SortableTableView
+        android:id="@+id/historyTable"
+        table:tableView_headerColor="@color/colorPrimary"
+        table:tableView_columnCount="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dafdea" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_data_indicator"
+        android:visibility="gone"
+        android:src="@drawable/no_records_found"
+        />
+</RelativeLayout>

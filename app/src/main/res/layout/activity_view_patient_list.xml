@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:table="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_patient_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.densysMobile.android.dengue_phi_client.ViewPatientList">
+
+    <de.codecrafters.tableview.SortableTableView
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dafdea"
+        table:tableView_columnCount="7"
+        table:tableView_headerColor="@color/colorAccent"
+        table:tableView_headerElevation="10" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/patientListInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:rippleColor="@color/blue"
+        android:src="@drawable/ic_info_white_24px" />
+
+
+</RelativeLayout>

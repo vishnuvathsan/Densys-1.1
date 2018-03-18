@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_patient_visit_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.densysMobile.android.dengue_phi_client.PatientVisit">
+
+    <TextView
+        android:text="Patient Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/patientNameLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/patientNameTV"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_alignStart="@+id/typeFeverSelect" />
+
+    <TextView
+        android:text="Type of Fever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/typeOfFeverText" />
+
+    <android.support.v7.widget.AppCompatSpinner
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/typeF_array"
+        android:id="@+id/typeFeverSelect"
+        android:layout_alignBaseline="@+id/typeOfFeverText"
+        android:layout_alignParentEnd="true">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignStart="@+id/typeFeverSelect"
+        android:layout_marginStart="7dp"
+        android:textSize="20sp"
+        android:id="@+id/dateOfInspection" />
+
+    <android.support.v7.widget.AppCompatSpinner
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/occupation_array"
+        android:id="@+id/occupation"
+        android:layout_alignBaseline="@+id/occupationText"
+        android:layout_alignBottom="@+id/occupationText"
+        android:layout_alignParentEnd="true">
+
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/occupation"
+        android:layout_alignParentStart="true">
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:text="Occupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/occupationText"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_comments"
+        android:maxLines="1"
+        android:layout_below="@+id/occupation"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="62dp" />
+
+    <TextView
+        android:text="Date of Inspections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/typeFeverSelect"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Change Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLoc"
+        android:layout_below="@id/comment"
+        android:layout_marginTop="50dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_latitudeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLoc"
+        android:layout_alignParentStart="true"
+        >
+
+        <EditText
+            android:id="@+id/input_latitude"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_latitude"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_longitudeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/input_latitudeText"
+        android:layout_toEndOf="@+id/input_latitudeText">
+
+        <EditText
+            android:id="@+id/input_longitude"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_longitude"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:text="Next"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_longitudeText"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/nextButton"
+        />
+
+    <Button
+        android:text="Get Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getLocationButton"
+        android:layout_below="@+id/comment"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="View History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewHistory"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@+id/input_latitudeText"
+        android:layout_toEndOf="@+id/getLocationButton"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:text="View On Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_latitudeText"
+        android:layout_alignParentStart="true"
+        android:id="@+id/viewOnMapButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignEnd="@+id/textView2" />
+
+
+</RelativeLayout>
+</ScrollView>

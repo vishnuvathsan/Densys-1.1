@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.densysMobile.android.dengue_phi_client">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver
+            android:name="com.densysMobile.android.dengue_phi_client.BroadcastReceivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />.
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.PatientDetails"
+            android:label="Patient Details"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.AddNewPatientForm"
+            android:label="@string/add_patient_title"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.PatientVisit"
+            android:label="Patient Details"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.ViewPatientList" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.densysMobile.android.dengue_phi_client.ViewPatientList" />
+
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.Login"
+            android:theme="@style/AppTheme.Dark">
+
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.ViewPatientList"
+            android:label="@string/patient_list"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.PatientDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.PatientDetails" />
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.BreedingPlaces"
+            android:label="Add Breeding Places"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.PatientVisit">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.PatientVisit" />
+        </activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.densysMobile.android.dengue_phi_client.PatientHistory"
+            android:label="Patient Record History"
+            android:parentActivityName="com.densysMobile.android.dengue_phi_client.PatientVisit">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.densysMobile.android.dengue_phi_client.PatientVisit" />
+        </activity>
+        <activity android:name="com.densysMobile.android.dengue_phi_client.ActionTaken" />
+        <activity android:name="com.densysMobile.android.dengue_phi_client.UI.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

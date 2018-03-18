@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:table="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_breeding_places"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.densysMobile.android.dengue_phi_client.BreedingPlaces">
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/group_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:text="Select Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/groupText" />
+
+    <TextView
+        android:text="Select Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_spinner"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:id="@+id/typeText" />
+
+    <Button
+        android:text="Add to Table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToTable"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/laveeContainerNo"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="No of Containers :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_spinner"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/containersText" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/item_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/typeText"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/containerNo"
+        android:max="50"
+        android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_below="@+id/containersText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/wetContainerNo"
+        android:max="10"
+        android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_below="@+id/wetContainerText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="No of Wet Containers :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containersText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/wetContainerText" />
+
+    <TextView
+        android:text="No of Lavee Containers:"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/wetContainerText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/laveeContainerText"
+        tools:text="No of Larvae Containers:" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="10"
+        android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/laveeContainerNo"
+        android:layout_below="@+id/laveeContainerText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <de.codecrafters.tableview.TableView
+        android:id="@+id/breedingPlacesTable"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        table:tableView_columnCount="5"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/addToTable"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/legal"
+        android:layout_toEndOf="@+id/addToTable"
+        android:layout_alignParentEnd="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="26dp"
+        android:id="@+id/breedingPlacesNextButton" />
+
+    <CheckBox
+        android:text="Cleaned/Removed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/breedingPlacesTable"
+        android:id="@+id/cleaned" />
+
+    <CheckBox
+        android:text="Health Education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cleaned"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/healthEducation" />
+
+    <CheckBox
+        android:text="Notice Issued"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/healthEducation"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/notice" />
+
+    <CheckBox
+        android:text="Legal Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/notice"
+        android:layout_marginTop="10dp"
+        android:id="@+id/legal" />
+
+
+</RelativeLayout>
+</ScrollView>

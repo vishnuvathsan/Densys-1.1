@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_add_new_patient_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="32dp"
+        tools:context="com.densysMobile.android.dengue_phi_client.AddNewPatientForm">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_year_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_name"
+            android:layout_marginTop="46dp">
+
+            <EditText
+                android:id="@+id/input_year_age"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/hint_year"
+                android:maxLines="1" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_name"
+            android:layout_marginTop="26dp"
+            android:text="@string/age_text" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_month_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/input_layout_year_age"
+            android:layout_marginStart="119dp"
+            android:layout_toEndOf="@+id/ageText">
+
+            <EditText
+                android:id="@+id/input_month_age"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/input_layout_year_age"
+                android:layout_marginTop="34dp"
+                android:inputType="number"
+                android:hint="@string/hint_months"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_year_age"
+            android:layout_marginTop="21dp"
+            android:text="@string/genderText" />
+
+        <TextView
+            android:id="@+id/districtText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_address"
+            android:layout_marginTop="50dp"
+            android:text="@string/district_text" />
+
+
+        <TextView
+            android:id="@+id/mohText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/district"
+            android:layout_marginTop="50dp"
+            android:text="@string/moh_text" />
+
+        <TextView
+            android:id="@+id/phiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/moh"
+            android:layout_marginTop="50dp"
+            android:text="@string/phi_text" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/genderText"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                android:id="@+id/input_address"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/genderSelect"
+                android:layout_marginTop="19dp"
+                android:hint="@string/hint_adress"
+                android:maxLines="5" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/gnd"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/input_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/input_layout_remarks"
+                android:layout_marginTop="21dp"
+                android:hint="@string/hint_remarks"
+                android:maxLines="1" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/submitPatient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/input_layout_remarks"
+            android:layout_marginTop="23dp"
+            android:text="Submit" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+
+            android:id="@+id/gnd"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/phi"
+            android:layout_below="@+id/phi"
+            android:layout_marginTop="33dp">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <TextView
+            android:id="@+id/GNText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/input_layout_remarks"
+            android:layout_alignParentStart="true"
+            android:text="@string/gndev_text" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+
+            android:id="@+id/phi"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/phiText"
+            android:layout_alignStart="@+id/moh">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+
+            android:id="@+id/moh"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/mohText"
+            android:layout_alignStart="@+id/genderSelect">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+
+            android:id="@+id/district"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/districtText"
+            android:layout_marginStart="33dp"
+            android:layout_toEndOf="@+id/genderText">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/genderSelect"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/genderText"
+            android:layout_alignBottom="@+id/genderText"
+            android:layout_alignStart="@+id/district"
+            android:entries="@array/gender_array">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/capturePhotoButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_below="@+id/moh"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:visibility="invisible"-->
+            <!--app:fabSize="mini"-->
+            <!--app:srcCompat="@mipmap/ic_camera" />-->
+
+
+    </RelativeLayout>
+
+</ScrollView>
