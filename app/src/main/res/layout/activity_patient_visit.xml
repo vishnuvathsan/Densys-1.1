@@ -51,6 +51,16 @@
     </android.support.v7.widget.AppCompatSpinner>
 
     <TextView
+        android:text="Date of Inspections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/typeFeverSelect"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/dateOfInspection"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView2"
@@ -99,15 +109,6 @@
         android:layout_below="@+id/occupation"
         android:layout_alignParentStart="true"
         android:layout_marginTop="62dp" />
-
-    <TextView
-        android:text="Date of Inspections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/typeFeverSelect"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Get Location"
@@ -164,8 +165,7 @@
         android:layout_below="@+id/input_latitudeText"
         android:layout_alignParentStart="true"
         android:id="@+id/viewOnMapButton"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_alignEnd="@+id/textView2" />
+        style="@style/Widget.AppCompat.Button.Colored" />
 
     <Button
         android:text="View History"
