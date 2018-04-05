@@ -51,6 +51,16 @@
     </android.support.v7.widget.AppCompatSpinner>
 
     <TextView
+        android:text="Date of Inspections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/typeFeverSelect"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/dateOfInspection"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView2"
@@ -100,13 +110,13 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="62dp" />
 
-    <TextView
-        android:text="Date of Inspections"
+    <Button
+        android:text="Get Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/typeFeverSelect"
+        android:id="@+id/getLocationButton"
+        android:layout_below="@+id/comment"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_alignParentStart="true" />
 
     <CheckBox
@@ -135,9 +145,9 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_longitudeText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/input_latitudeText"
+        android:layout_below="@+id/editLoc"
         android:layout_toEndOf="@+id/input_latitudeText">
 
         <EditText
@@ -149,23 +159,13 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:text="Next"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="View On Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/input_longitudeText"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/nextButton"
-        />
-
-    <Button
-        android:text="Get Location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/getLocationButton"
-        android:layout_below="@+id/comment"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/input_latitudeText"
+        android:layout_alignParentStart="true"
+        android:id="@+id/viewOnMapButton"
+        style="@style/Widget.AppCompat.Button.Colored" />
 
     <Button
         android:text="View History"
@@ -174,19 +174,16 @@
         android:id="@+id/viewHistory"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_below="@+id/input_latitudeText"
-        android:layout_toEndOf="@+id/getLocationButton"
-        android:layout_marginStart="10dp" />
+        android:layout_toEndOf="@+id/viewOnMapButton" />
 
     <Button
-        android:text="View On Map"
+        android:text="Next"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/input_latitudeText"
-        android:layout_alignParentStart="true"
-        android:id="@+id/viewOnMapButton"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_alignEnd="@+id/textView2" />
-
+        android:layout_below="@+id/input_longitudeText"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/nextButton" />
 
 </RelativeLayout>
 </ScrollView>
