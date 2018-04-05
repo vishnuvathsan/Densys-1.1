@@ -96,9 +96,9 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
         Date fourteenDaysAgo = cal.getTime();
         final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, MMM d, yyyy");
         String formattedTextTwoWeeksAgo = simpleDateFormat.format(fourteenDaysAgo);
-        startLabel.setText("Start Date");
+        startLabel.setText("Start Date:");
         startLabel.setVisibility(View.VISIBLE);
-        endLabel.setText("End Date");
+        endLabel.setText("End Date:");
         endLabel.setVisibility(View.VISIBLE);
         startDate.setText(formattedTextTwoWeeksAgo);
         startDate.setVisibility(View.VISIBLE);
@@ -191,9 +191,9 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
                 Date fourteenDaysAgo = cal.getTime();
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, MMM d, yyyy");
                 String formattedTextTwoWeeksAgo = simpleDateFormat.format(fourteenDaysAgo);
-                startLabel.setText("Start Date");
+                startLabel.setText("Start Date:");
                 startLabel.setVisibility(View.VISIBLE);
-                endLabel.setText("End Date");
+                endLabel.setText("End Date:");
                 endLabel.setVisibility(View.VISIBLE);
                 endDate.setText(formattedTextTwoWeeksAgo);
                 endDate.setVisibility(View.VISIBLE);
@@ -243,10 +243,10 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
                                                            int yearStart, int monthStart,
                                                            int dayStart, int yearEnd,
                                                            int monthEnd, int dayEnd) {
-                                    startLabel.setText("From");
+                                    startLabel.setText("From:");
                                     startLabel.setVisibility(View.VISIBLE);
                                     endLabel.setVisibility(View.VISIBLE);
-                                    endLabel.setText("To");
+                                    endLabel.setText("To:");
                                     startDate.setVisibility(View.VISIBLE);
                                     endDate.setVisibility(View.VISIBLE);
                                     Calendar startDateCalenderInstance = Calendar.getInstance();
