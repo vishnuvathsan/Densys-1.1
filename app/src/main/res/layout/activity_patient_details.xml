@@ -145,6 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/startLabel"
                     android:layout_marginLeft="5dp"
+                    android:onClick="showDatePickerDialog"
                     android:text="Start Date" />
 
                 <TextView

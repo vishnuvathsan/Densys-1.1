@@ -3,6 +3,7 @@ package com.densysMobile.android.dengue_phi_client;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -41,6 +42,8 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
     private String specificMonth = null;
     private HashMap<String, Integer> hospitalMap = new HashMap<>();
     private boolean reset = false;
+    private TextView startDate;
+    private TextView endDate;
 
     public static void setRecordList(List<Record> listRecord) {
         for (int rec = 0; rec < listRecord.size(); rec++) {
@@ -63,8 +66,8 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
         }
         final TextView minAge = (TextView) findViewById(R.id.minAgeTV);
         final TextView maxAge = (TextView) findViewById(R.id.maxAgeTv);
-        final TextView startDate = (TextView) findViewById(R.id.startDateTV);
-        final TextView endDate = (TextView) findViewById(R.id.endDateTV);
+        startDate = (TextView) findViewById(R.id.startDateTV);
+        endDate = (TextView) findViewById(R.id.endDateTV);
         final TextView startLabel = (TextView) findViewById(R.id.startLabel);
         final TextView endLabel = (TextView) findViewById(R.id.endLabel);
         final Button searchButton = (Button) findViewById(R.id.searchButton);
@@ -318,5 +321,29 @@ public class PatientDetails extends AppCompatActivity implements DatePickerDialo
     private void getHospitalList(HashMap<String, Integer> map, Spinner gn) {
         map.clear();
         NetworkCore.getSiteList(map, gn, this);
+    }
+
+    public void showDatePickerDialog(final View view) {
+        DatePickerFragment newFragment = new DatePickerFragment();
+        newFragment.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, MMM d, yyyy");
+
+                Calendar startDateCalenderInstance = Calendar.getInstance();
+                startDateCalenderInstance.clear();
+                startDateCalenderInstance.set(year, month, dayOfMonth);
+                Date startDateInstance = startDateCalenderInstance.getTime();
+                startDate.setText(simpleDateFormat.format(startDateInstance));
+
+                Calendar endDateCalenderInstance = Calendar.getInstance();
+                endDateCalenderInstance.clear();
+                endDateCalenderInstance.set(year, month, dayOfMonth);
+                endDateCalenderInstance.add(Calendar.DAY_OF_MONTH, 14);
+                Date endDateInstance = endDateCalenderInstance.getTime();
+                endDate.setText(simpleDateFormat.format(endDateInstance));
+            }
+        });
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 }
