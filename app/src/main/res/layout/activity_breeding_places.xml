@@ -100,7 +100,7 @@
         android:id="@+id/wetContainerText" />
 
     <TextView
-        android:text="No of Lavee Containers:"
+        android:text="No of Larvae Containers:"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/wetContainerText"

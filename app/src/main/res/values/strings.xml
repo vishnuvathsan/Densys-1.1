@@ -32,6 +32,7 @@
     </string-array>
     <string-array name="typeF_array">
         <item>Dengue</item>
+        <item>NND</item>
         <item>Other</item>
     </string-array>
     <string-array name="hospital_array">
@@ -39,7 +40,6 @@
         <item>NHC</item>
     </string-array>
     <string-array name="occupation_array">
-        <item>Student</item>
         <item>Student</item>
         <item>Home</item>
         <item>Work</item>
